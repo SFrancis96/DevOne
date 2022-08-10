@@ -1,0 +1,8 @@
+:root {
+    --main-bg-color: #020206;
+    --white-color: #F8F8FF;
+    --rose-color: #EC83C2;
+
+    --rose-bg-gradient: linear-gradient(90deg, #BE14F9 0%, #EC83C2 100%);
+    --white-drop-shadow: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.66));
+}
