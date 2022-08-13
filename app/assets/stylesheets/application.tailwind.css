@@ -6,9 +6,19 @@
 
 @layer components {
   .btn-primary {
-    @apply py-2 px-4 rounded block;
+    @apply py-2 px-4 rounded block active:scale-105;
     background: var(--rose-bg-gradient);
     filter: var(--white-drop-shadow);
+  }
+
+  .btn-secondary {
+    @apply py-2 px-4 rounded block border-solid border-2 active:scale-105;
+    background: var(--transparent);
+    border-color: var(--white-color)
+  }
+
+  .h2-style {
+    @apply font-bold text-8xl mb-5;
   }
 }
 

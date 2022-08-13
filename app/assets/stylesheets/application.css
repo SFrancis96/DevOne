@@ -1,25 +1,59 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
 
- @import url(./var.css);
+@import url(./var.css);
 
- body {
-    font-family: 'Montserrat', sans-serif;
+body {
+    font-family: 'Poppins', sans-serif;
     font-size: 18px;
     background-color: var(--main-bg-color);
     color: var(--white-color);
     font-weight: 400;
- }
+
+    background: 
+    linear-gradient(114.95deg, #192041 0%, #e64ffa 34.35%, #670474 70%), 
+    linear-gradient(180deg, #020206 0%, #EC83C2 100%), 
+    linear-gradient(244.35deg, #cb83ec 0%, #020206 50.58%, #0e2180 100%), 
+    linear-gradient(244.35deg, #FFFFFF 0%, #f80979 49.48%, #020206 100%), 
+    radial-gradient(100% 233.99% at 0% 100%, #e933da 0%, #430468 100%), 
+    linear-gradient(307.27deg, #020206 0.37%, #BE14F9 50.19%, #2e001f 100%), 
+    radial-gradient(100% 140% at 100% 0%, #EC83C2 0%, #020206 49.48%, #1d73e4 100%);
+    /* linear-gradient(114.95deg, #760000 0%, rgba(235, 0, 255, 0.5) 34.35%, rgba(0, 71, 255, 0) 70%), 
+    linear-gradient(180deg, #004B5B 0%, #FFA7A7 100%), 
+    linear-gradient(244.35deg, #FFB26A 0%, #3676B1 50.58%, #00A3FF 100%), 
+    linear-gradient(244.35deg, #FFFFFF 0%, #004A74 49.48%, #FF0000 100%), 
+    radial-gradient(100% 233.99% at 0% 100%, #B70000 0%, #AD00FF 100%), 
+    linear-gradient(307.27deg, #219D87 0.37%, #2650BA 50.19%, #2800C6 100%), 
+    radial-gradient(100% 140% at 100% 0%, #FF00C7 0%, #006C7A 49.48%, #760000 100%); */
+    background-blend-mode: hard-light, overlay, overlay, overlay, difference, difference, normal;
+
+}
+
+body::-webkit-scrollbar { width: 0 !important }
+
+.devone-title {
+    font-size: 220px;
+    line-height: 200px;
+}
+
+/* .plain-text { text-shadow: 0px 0px 20px #BE14F9; } */
+
+.outline-text {
+    -webkit-text-stroke: 5px var(--white-color);
+    color: var(--transparent);
+}
+
+.transparent-bg-white {background-color: #F8F8FF1A;}
