@@ -22,7 +22,6 @@ body {
     background-color: var(--main-bg-color);
     color: var(--white-color);
     font-weight: 400;
-
     background: 
     linear-gradient(114.95deg, #192041 0%, #e64ffa 34.35%, #670474 70%), 
     linear-gradient(180deg, #020206 0%, #EC83C2 100%), 
@@ -39,7 +38,9 @@ body {
     linear-gradient(307.27deg, #219D87 0.37%, #2650BA 50.19%, #2800C6 100%), 
     radial-gradient(100% 140% at 100% 0%, #FF00C7 0%, #006C7A 49.48%, #760000 100%); */
     background-blend-mode: hard-light, overlay, overlay, overlay, difference, difference, normal;
-
+}
+.grain-img {
+    z-index: -1;
 }
 
 body::-webkit-scrollbar { width: 0 !important }
