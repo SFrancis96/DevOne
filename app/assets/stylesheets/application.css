@@ -50,11 +50,27 @@ body::-webkit-scrollbar { width: 0 !important }
     line-height: 200px;
 }
 
-/* .plain-text { text-shadow: 0px 0px 20px #BE14F9; } */
-
 .outline-text {
     -webkit-text-stroke: 5px var(--white-color);
     color: var(--transparent);
 }
 
 .transparent-bg-white {background-color: #F8F8FF1A;}
+
+h2 {
+    display: block;
+    position: relative;
+    width: fit-content;
+    margin-bottom: 40px !important;
+}
+
+h2::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 160px;
+    height: 3px;
+    background-color: var(--white-color);
+}

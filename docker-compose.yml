@@ -2,11 +2,19 @@ version: "3.9"
 services:
   db:
     image: postgres
+    restart: always
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: devone
       POSTGRES_HOST_AUTH_METHOD: trust
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
+
   web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
