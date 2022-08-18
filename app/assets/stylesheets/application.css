@@ -23,13 +23,13 @@ body {
     color: var(--white-color);
     font-weight: 400;
     background: 
-    linear-gradient(114.95deg, #192041 0%, #e64ffa 34.35%, #670474 70%), 
+    linear-gradient(114.95deg, #192041 0%, #BE14F9 34.35%, #670474 70%), 
     linear-gradient(180deg, #020206 0%, #EC83C2 100%), 
-    linear-gradient(244.35deg, #cb83ec 0%, #020206 50.58%, #0e2180 100%), 
-    linear-gradient(244.35deg, #FFFFFF 0%, #f80979 49.48%, #020206 100%), 
+    linear-gradient(244.35deg, #670474 0%, #020206 50.58%, #0e2180 100%), 
+    linear-gradient(244.35deg, #192041 0%, #192041 49.48%, #020206 100%), 
     radial-gradient(100% 233.99% at 0% 100%, #e933da 0%, #430468 100%), 
     linear-gradient(307.27deg, #020206 0.37%, #BE14F9 50.19%, #2e001f 100%), 
-    radial-gradient(100% 140% at 100% 0%, #EC83C2 0%, #020206 49.48%, #1d73e4 100%);
+    radial-gradient(100% 140% at 100% 0%, #EC83C2 0%, #020206 49.48%, #192041 100%);
     /* linear-gradient(114.95deg, #760000 0%, rgba(235, 0, 255, 0.5) 34.35%, rgba(0, 71, 255, 0) 70%), 
     linear-gradient(180deg, #004B5B 0%, #FFA7A7 100%), 
     linear-gradient(244.35deg, #FFB26A 0%, #3676B1 50.58%, #00A3FF 100%), 
@@ -73,4 +73,12 @@ h2::before {
     width: 160px;
     height: 3px;
     background-color: var(--white-color);
+}
+
+
+
+/* FORMULAIRE */
+.hint {
+    color: var(--rose-color);
+    font-size: 14px;
 }
