@@ -22,6 +22,8 @@ body {
     background-color: var(--main-bg-color);
     color: var(--white-color);
     font-weight: 400;
+    scroll-behavior: smooth;
+
     background: 
     linear-gradient(114.95deg, #192041 0%, #BE14F9 34.35%, #670474 70%), 
     linear-gradient(180deg, #020206 0%, #EC83C2 100%), 

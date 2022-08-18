@@ -7,6 +7,10 @@
             <li><a class="focus:font-semibold active:font-semibold" href="#">La team</a></li>
             <li><a class="focus:font-semibold active:font-semibold" href="#">Follow</a></li>
         </ul>
-        <a href="#" class="btn-primary">Se connecter</a>
+
+        <div class="flex items-center">
+            <%= link_to "Se connecter", "/users/sign_in", class: "mr-4" %>
+            <a href="<%= "/users/sign_up" %>" class="btn-primary">S'inscrire</a>
+        </div>
     </div>
 </nav>
