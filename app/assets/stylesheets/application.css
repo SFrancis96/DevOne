@@ -16,13 +16,14 @@
 
 @import url(./var.css);
 
+html, body {scroll-behavior: smooth;}
+
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     background-color: var(--main-bg-color);
     color: var(--white-color);
     font-weight: 400;
-    scroll-behavior: smooth;
 
     background: 
     linear-gradient(114.95deg, #192041 0%, #BE14F9 34.35%, #670474 70%), 
