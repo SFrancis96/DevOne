@@ -1,4 +1,7 @@
-<div>
-  <h1 class="font-bold text-4xl">Welcome#index</h1>
-  <p>Find me in app/views/welcome/index.html.erb</p>
-</div>
+<section id="welcome-section" class="min-h-screen grid place-items-center">
+    <div class="w-11/12 h-fit">
+        <%# <%= debug current_user %>
+        <h1 class="font-bold text-4xl">Bienvenue <%= current_user.username%> !</h1>
+        <p>Find me in app/views/welcome/index.html.erb</p>
+
+</section>

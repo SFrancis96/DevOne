@@ -6,10 +6,18 @@
         <%= f.error_notification %>
             <div class="form-inputs w-full">
                 <div>
+                    <%= f.input :username,
+                                :label => "Nom d'utilisateur",
+                                required: true,
+                                autofocus: true,
+                                input_html: { autocomplete: "username", class: "flex flex-col w-full mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" }%>
+                </div>
+
+            <div class="form-inputs w-full">
+                <div>
                     <%= f.input :email,
                                 :label => "Email",
                                 required: true,
-                                autofocus: true,
                                 input_html: { autocomplete: "email", class: "flex flex-col w-full mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" }%>
                 </div>
 
