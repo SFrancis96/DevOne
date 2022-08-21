@@ -6,13 +6,11 @@
 
 @layer components {
   .btn-primary {
-    @apply py-2 px-4 rounded block active:scale-105 cursor-pointer;
-    background: var(--rose-bg-gradient);
-    filter: var(--white-drop-shadow);
+    @apply bg-violet-600 hover:bg-violet-700 text-white block px-3 py-2 rounded-md text-sm font-medium transition-all;
   }
 
   .btn-secondary {
-    @apply py-2 px-4 rounded block border-solid border-2 active:scale-105 cursor-pointer;
+    @apply border-solid border-2 text-white block px-3 py-2 rounded-md text-sm font-medium transition-all;
     background: var(--transparent);
     border-color: var(--white-color)
   }

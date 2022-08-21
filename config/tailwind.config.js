@@ -22,6 +22,9 @@ module.exports = {
       },
       hueRotation: {
         280: '280deg'
+      },
+      maxWidth: {
+        '80': '80%'
       }
     },
   },
