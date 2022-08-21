@@ -1,7 +1,15 @@
 <section id="welcome-section" class="min-h-screen grid place-items-center">
-    <div class="w-11/12 h-fit">
+    <div class="w-5/6 h-fit">
         <%# <%= debug current_user %>
-        <h1 class="font-bold text-4xl">Bienvenue <%= current_user.username%> !</h1>
-        <p>Find me in app/views/welcome/index.html.erb</p>
-
+        <div class="flex justify-between items-center">
+            <div>
+                <h1 class="h2-style">Bienvenue<br> <span class="text-9xl"><%= current_user.username%>!  &#x1F600;</span></h1>
+                <p class="text-4xl">Télécharge le programme<br>et commence à miner tes cryptos <span class="font-semibold italic">DevOne</span> !</p>
+            </div>
+            <div>
+                <p class="text-4xl mb-6">Télécharger le programme</p>
+                <a href="#" class="btn-primary text-2xl w-full mx-auto text-center">Télécharger</a>
+            </div>
+        </div>
+    </div>
 </section>
