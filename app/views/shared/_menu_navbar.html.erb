@@ -9,8 +9,12 @@
         </ul>
 
         <div class="flex items-center">
-            <%= link_to "Se connecter", "/users/sign_in", class: "mr-4" %>
-            <a href="<%= "/users/sign_up" %>" class="btn-primary">S'inscrire</a>
+            <% if user_signed_in? %>
+                <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete,  class: "mr-4" %>
+            <% else %>
+                <%= link_to "Se connecter", "/users/sign_in", class: "mr-4" %>
+                <a href="<%= "/users/sign_up" %>" class="btn-primary">S'inscrire</a>
+            <% end %>
         </div>
     </div>
 </nav>
