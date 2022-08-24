@@ -32,15 +32,18 @@
         <div class="flex-shrink-0 flex items-center">
             <%= link_to image_tag("logo_devone.png", :alt => "Home | DevOne"), root_path(landing_url) %>
             <div class="hidden sm:block sm:ml-6">
-            <div class="flex space-x-4">
-                <!-- Current: "bg-violet-900 text-white", Default: "text-violet-300 hover:bg-violet-600 hover:text-white" -->
-                <a href="#second-section" class="text-violet-300 hover:bg-violet-600 hover:text-white focus:text-white active:text-white focus:bg-violet-600 active:bg-violet-600 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Le Projet</a>
+                <div class="flex space-x-4">
+                    <% if user_signed_in? %>
+                        <a href="<%= "/welcome" %>" class="text-violet-300 hover:bg-violet-600 hover:text-white focus:text-white active:text-white focus:bg-violet-600 active:bg-violet-600 px-3 py-2 rounded-md text-sm font-medium">Mon compte</a>
+                    <% else %>          
+                        <!-- Current: "bg-violet-900 text-white", Default: "text-violet-300 hover:bg-violet-600 hover:text-white" -->
+                        <a href="#second-section" class="text-violet-300 hover:bg-violet-600 hover:text-white focus:text-white active:text-white focus:bg-violet-600 active:bg-violet-600 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Le Projet</a>
 
-                <a href="#third-section" class="text-violet-300 hover:bg-violet-600 hover:text-white focus:text-white active:text-white focus:bg-violet-600 active:bg-violet-600 px-3 py-2 rounded-md text-sm font-medium">La Team</a>
+                        <a href="#third-section" class="text-violet-300 hover:bg-violet-600 hover:text-white focus:text-white active:text-white focus:bg-violet-600 active:bg-violet-600 px-3 py-2 rounded-md text-sm font-medium">La Team</a>
 
-                <a href="#fourth-section" class="text-violet-300 hover:bg-violet-600 hover:text-white focus:text-white active:text-white focus:bg-violet-600 active:bg-violet-600 px-3 py-2 rounded-md text-sm font-medium">Télécharger</a>
-
-            </div>
+                        <a href="#fourth-section" class="text-violet-300 hover:bg-violet-600 hover:text-white focus:text-white active:text-white focus:bg-violet-600 active:bg-violet-600 px-3 py-2 rounded-md text-sm font-medium">Télécharger</a>
+                    <% end %>
+                </div>
             </div>
         </div>
       </div>
@@ -63,13 +66,16 @@
   <!-- Mobile menu, show/hide based on menu state. -->
   <div class="hidden sm:hidden h-screen relative" id="mobile-menu">
     <div class="px-2 pt-2 pb-3 space-y-1">
-        <!-- Current: "bg-violet-900 text-white", Default: "text-violet-300 hover:bg-violet-600 hover:text-white" -->
-        <a href="#second-section" class="block text-violet-300 hover:bg-violet-600 hover:text-white focus:text-white active:text-white focus:bg-violet-600 active:bg-violet-600 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Le Projet</a>
+        <% if user_signed_in? %>
+            <a href="<%= "/welcome" %>" class="text-violet-300 hover:bg-violet-600 hover:text-white focus:text-white active:text-white focus:bg-violet-600 active:bg-violet-600 px-3 py-2 rounded-md text-sm font-medium">Mon compte</a>
+        <% else %>          
+            <!-- Current: "bg-violet-900 text-white", Default: "text-violet-300 hover:bg-violet-600 hover:text-white" -->
+            <a href="#second-section" class="text-violet-300 hover:bg-violet-600 hover:text-white focus:text-white active:text-white focus:bg-violet-600 active:bg-violet-600 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Le Projet</a>
 
-        <a href="#third-section" class="block text-violet-300 hover:bg-violet-600 hover:text-white focus:text-white active:text-white focus:bg-violet-600 active:bg-violet-600 px-3 py-2 rounded-md text-sm font-medium">La Team</a>
+            <a href="#third-section" class="text-violet-300 hover:bg-violet-600 hover:text-white focus:text-white active:text-white focus:bg-violet-600 active:bg-violet-600 px-3 py-2 rounded-md text-sm font-medium">La Team</a>
 
-        <a href="#fourth-section" class="block text-violet-300 hover:bg-violet-600 hover:text-white focus:text-white active:text-white focus:bg-violet-600 active:bg-violet-600 px-3 py-2 rounded-md text-sm font-medium">Télécharger</a>
-
+            <a href="#fourth-section" class="text-violet-300 hover:bg-violet-600 hover:text-white focus:text-white active:text-white focus:bg-violet-600 active:bg-violet-600 px-3 py-2 rounded-md text-sm font-medium">Télécharger</a>
+        <% end %>
         <div class="absolute bottom-1/4 block w-screen space-y-3">  
         <% if user_signed_in? %>
             <a href="<%= "/users/sign_out" %>" class="btn-primary">Se déconnecter</a>
