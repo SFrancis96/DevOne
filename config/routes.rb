@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users do
-    get '/users/sign_out' => 'devise/sessions#destroy'
-  end
+  get 'welcome/index'
+    devise_for :users
+    get '/welcome' => "welcome#index", as: :user_root
     # Defines the root path route ("/")
     root "landing_page#index"
     get "/landing", to: 'landing_page#index'

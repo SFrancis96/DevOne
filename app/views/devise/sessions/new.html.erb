@@ -3,7 +3,7 @@
 
         <h2 class="h2-style mx-auto"">Login</h2>
 
-        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), :html => {class: 'w-1/3 mx-auto mb-10'}) do |f| %>
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), :html => {class: 'w-11/12 sm:w-1/3 mx-auto mb-10'}) do |f| %>
         <div class="form-inputs w-full">
             <%= f.input :email,
                         :label => "Email",
@@ -16,9 +16,9 @@
                         input_html: { autocomplete: "current-password", class: "flex flex-col w-full mb-6 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" } %>
         </div>
 
-        <div class="form-actions flex justify-between">
-            <%= f.input :remember_me, :label => "Ce souvenir de moi", as: :boolean if devise_mapping.rememberable? %>
-            <%= f.button :submit, "Se connecter", :class => "btn-primary ml-auto" %>
+        <div class="form-actions flex flex-col sm:flex-row sm:justify-between">
+            <%= f.input :remember_me, :label => "Ce souvenir de moi", :class => "mb-4", as: :boolean if devise_mapping.rememberable? %>
+            <%= f.button :submit, "Se connecter", :class => "btn-primary sm:ml-auto" %>
         </div>
         <% end %>
 
