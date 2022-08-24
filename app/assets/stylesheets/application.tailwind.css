@@ -20,11 +20,11 @@
   }
 
   .notice {
-    @apply font-semibold absolute top-20 left-5 p-4 text-indigo-300 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex;
+    @apply font-semibold absolute top-20 left-5 p-4 text-yellow-300 items-center leading-none lg:rounded-full flex lg:inline-flex;
   }
 
   .alert {
-    @apply font-semibold absolute top-20 left-5 p-4 text-fuchsia-300 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex;
+    @apply font-semibold absolute top-20 left-5 p-4 text-red-600 items-center leading-none lg:rounded-full flex lg:inline-flex;
   }
 }
 

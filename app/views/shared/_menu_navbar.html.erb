@@ -65,7 +65,7 @@
 
   <!-- Mobile menu, show/hide based on menu state. -->
   <div class="hidden sm:hidden h-screen relative" id="mobile-menu">
-    <div class="px-2 pt-2 pb-3 space-y-1">
+    <div class="px-2 pt-2 pb-3 space-y-1 flex flex-col">
         <% if user_signed_in? %>
             <a href="<%= "/welcome" %>" class="text-violet-300 hover:bg-violet-600 hover:text-white focus:text-white active:text-white focus:bg-violet-600 active:bg-violet-600 px-3 py-2 rounded-md text-sm font-medium">Mon compte</a>
         <% else %>          
@@ -89,10 +89,9 @@
 </nav>
 
 <script type="text/javascript">
-console.log('on est dans le js');
 const burgerButton = document.getElementById('burger-button');
 const mobileMenu = document.getElementById('mobile-menu');
-burgerButton.addEventListener("click", function () {
+function displayMobileMenu() { 
     if (burgerButton.classList.contains('active')) {
         burgerButton.classList.remove('active');
         mobileMenu.style.display = 'none';
@@ -100,17 +99,22 @@ burgerButton.addEventListener("click", function () {
         burgerButton.classList.add('active');
         mobileMenu.style.display = 'block';
     }
-});
+}
+
+function windowResize() {
+    if (window.innerWidth < 640) {
+        if (burgerButton.classList.contains('active')) {
+            mobileMenu.style.display = 'block';
+        }else{
+            mobileMenu.style.display = 'none';
+        }
+    }else{
+        burgerButton.classList.remove('active');
+        mobileMenu.style.display = 'none';
+    }
+}
+
+window.addEventListener("resize", windowResize)
+burgerButton.addEventListener("load", displayMobileMenu);
+burgerButton.addEventListener("click", displayMobileMenu);
 </script>
-
-
-
-
-
-
-
-
-
-
-
-

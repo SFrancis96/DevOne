@@ -5,9 +5,9 @@
             <p class="text-2xl sm:text-4xl mb-5">Projet cryptomonnaie</p>
             <div class="flex flex-col sm:flex-row">
             <% if user_signed_in? %>
-                <a class="btn-primary mb-4 sm:mr-5" href="#" title="Commencer à miner">Commencer à miner</a>
+                <a class="btn-primary mb-4 sm:mb-0 sm:mr-5" href="#" title="Commencer à miner">Commencer à miner</a>
             <% else %>
-                <a class="btn-primary mb-4 sms:mr-5" href="<%= "/users/sign_in" %>" title="Commencer à miner">Commencer à miner</a>
+                <a class="btn-primary mb-4 sm:mb-0 sm:mr-5" href="<%= "/users/sign_in" %>" title="Commencer à miner">Commencer à miner</a>
             <% end %>
                 <a class="btn-secondary" href="#second-section" title="Découvrire le projet">Découvrire le projet</a>
             </div>
