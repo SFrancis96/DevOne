@@ -5,7 +5,7 @@
             <p class="text-2xl sm:text-4xl mb-5">Projet cryptomonnaie</p>
             <div class="flex flex-col sm:flex-row">
             <% if user_signed_in? %>
-                <a class="btn-primary mb-4 sm:mb-0 sm:mr-5" href="#" title="Commencer à miner">Commencer à miner</a>
+                <a class="btn-primary mb-4 sm:mb-0 sm:mr-5" href="https://github.com//sassani134/CryptoProject/archive/refs/heads/main.zip" title="Commencer à miner">Commencer à miner</a>
             <% else %>
                 <a class="btn-primary mb-4 sm:mb-0 sm:mr-5" href="<%= "/users/sign_in" %>" title="Commencer à miner">Commencer à miner</a>
             <% end %>
@@ -144,7 +144,11 @@
             </div>
             <div class="mb-5">
                 <h2 class="font-bold text-5xl sm:text-6xl xl:text-7xl 2xl:text-8xl mb-5"><span class="outline-text-sm">Télécharger</span><br>le programme</h2>
-                <a class="btn-primary w-fit" href="">Télécharger</a>
+                <% if user_signed_in? %>
+                    <a class="btn-primary w-fit" href="https://github.com//sassani134/CryptoProject/archive/refs/heads/main.zip">Télécharger</a>
+                <% else %>
+                    <a class="btn-primary w-fit" href="<%= "/users/sign_in" %>">Télécharger</a>
+                <% end %>
             </div>
         </div>
     </section>
